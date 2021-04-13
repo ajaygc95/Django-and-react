@@ -1,0 +1,8 @@
+.image-container {
+  position: relative;
+  background-color: red;
+}
+
+img {
+  width: 100%;
+}

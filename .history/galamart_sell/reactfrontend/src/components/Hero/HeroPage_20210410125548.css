@@ -1,0 +1,17 @@
+.image-container {
+  position: relative;
+  background-color: red;
+  text-align: center;
+  color: blue;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate();
+}

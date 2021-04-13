@@ -1,0 +1,10 @@
+
+.nav{
+    background-color: rgb(35, 154, 175);
+    color: white;
+    list-style-type: none;
+}
+
+.nav-links{
+    width: 50%;
+}

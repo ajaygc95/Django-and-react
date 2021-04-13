@@ -1,0 +1,48 @@
+.navbar {
+  background:linear-gradient(90deg, rgb(110,94,253), );
+  height: 65px;
+  width: 100%;
+
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+}
+
+.navbar-container {
+  background-color: orange;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+}
+
+.container {
+  z-index: 1;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.navbar-logo {
+  align-items: center;
+  text-decoration: none;
+  color: purple;
+  display: flex;
+  font-size: 1.4rem;
+}
+
+.navbar-icon {
+  margin-left: 10px;
+  color: purple;
+  font-size: 1.8rem;
+}
+
+.menu-icon {
+  align-items: center;
+  line-height: 65px;
+  font-size: 2.5rem;
+}

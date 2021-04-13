@@ -1,0 +1,23 @@
+.image-container {
+  position: relative;
+  background-color: red;
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.head-text {
+  font-size: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: aqua;
+  transform: translate(-50%, -50%);
+}
+
+.search {
+  padding: 4px 20px;
+  background-colorrgb(70, 96, 190);
+}

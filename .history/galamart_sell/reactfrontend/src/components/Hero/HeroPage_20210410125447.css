@@ -1,0 +1,10 @@
+.image-container {
+  position: relative;
+  background-color: red;
+  text-align: center;
+  color: white;
+}
+
+img {
+  width: 100%;
+}

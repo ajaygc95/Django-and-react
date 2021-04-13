@@ -1,0 +1,38 @@
+.hero-page {
+  background-color: red;
+}
+
+/* .image {
+  position: relative;
+  background-color: red;
+  text-align: center;
+  margin-top: 65px;
+}
+
+img {
+  width: 100%;
+}
+
+.head-text {
+  text-align: center;
+  font-size: 2rem;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  color: white;
+  transform: translate(-60%, -50%);
+}
+
+.search {
+  padding: 10px 50px;
+  background-color: var(--navprimary);
+  color: white;
+  width: auto;
+  font-size: 2rem;
+  border-radius: 20px;
+  border: none;
+}
+
+.search:hover {
+  opacity: 1.2;
+} */

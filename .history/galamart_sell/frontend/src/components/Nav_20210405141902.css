@@ -1,0 +1,23 @@
+
+
+.nav{
+    background-color: rgb(35, 154, 175);
+    color: white;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul > li {
+    font-size: 1.5rem;
+    display: block;
+    width: 200px;
+    line-height: 50px;
+    float: left;
+
+}
+
+ul > li:hover {
+    background-color: red;
+}

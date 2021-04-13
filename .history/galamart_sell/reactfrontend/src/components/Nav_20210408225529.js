@@ -1,0 +1,72 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { FaBars, FaTimes, FaBeer } from "react-icons/fa";
+import { Button } from "./Button";
+import "./Nav.css";
+import { MenuItems } from "./MenuItems";
+import ItemDetail from "./ItemDetail";
+
+function Nav() {
+  const [click, setclick] = useState(false);
+  const [button, setbutton] = useState(true);
+  const handleClick = () => setclick(!click);
+
+  const showButton = () => {
+    if (window.innerWidth <= 960) {
+      setbutton(false);
+    } else {
+      setbutton(true);
+    }
+  };
+
+  useEffect(() => {
+    showButton();
+    window.addEventListener('resize', showButton);
+    return {
+      window.removeEventListener('resize', showButton)
+    }
+  }, []);
+
+  return (
+    <>
+      <nav className="navbar">
+        <div className="navbar-container container">
+          <Link to="/" className="navbar-logo">
+            BoozeCart
+            <FaBeer className="navbar-icon"></FaBeer>
+          </Link>
+          <div className="menu-item">
+            {MenuItems.map((item, index) => (
+              <Link key={index} to={`${item.url}`} className={item.cName}>
+                {item.title}
+              </Link>
+            ))}
+           <li className='nav-btn'>
+                {button ? (
+                  <Link to='/sign-up' className='btn-link'>
+                    <Button buttonStyle='btn--outline'>SIGN UP</Button>
+                  </Link>
+                ) : (
+                  <Link to='/sign-up' className='btn-link'>
+                    <Button
+                      buttonStyle='btn--outline'
+                      buttonSize='btn--mobile'
+                      onClick={closeMobileMenu}
+                    >
+                      SIGN UP
+                    </Button>
+                  </Link>
+                )}
+              </li>
+          </div>
+
+          <div className="menu-icon" onClick={handleClick}>
+            {click ? <FaTimes /> : <FaBars />}
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}
+
+export default Nav;

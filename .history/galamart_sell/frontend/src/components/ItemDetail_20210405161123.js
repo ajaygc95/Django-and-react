@@ -1,0 +1,29 @@
+import React, {useState, useEffect} from 'react'
+
+function ItemDetail({match}) {
+    useEffect(() => {
+        fetchItems()
+        console.
+    }, [])
+
+    const [item, setItem] = useState([])
+
+    const fetchItems = async () => {
+        const data = await fetch(
+            `http://localhost:8000/blog/api/todos/${match.id}`
+        )
+
+        const items = await data.json()
+        console.log(items)
+        setItem(items)
+    }
+
+
+    return (
+        <div>
+            {item.title}
+        </div>
+    )
+}
+
+export default ItemDetail
