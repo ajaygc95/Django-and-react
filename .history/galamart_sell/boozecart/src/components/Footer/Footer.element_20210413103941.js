@@ -92,7 +92,7 @@ export const FooterLinksItems = styled.div`
 
     @media screen and (max-width: 420px){
 
-        margin-bottom : 16px;
+        margin-bottom 
     }
 
 `

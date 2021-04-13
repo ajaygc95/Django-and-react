@@ -81,18 +81,4 @@ export const FooterLinksWrapper = styled.div`
     }
 `
 
-export const FooterLinksItems = styled.div`
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 16px;
-    width: 160px;
-    box-sizing: border-box;
-    color: #fff;
-
-    @media screen and (max-width: 420px){
-
-        margin-bottom : 16px;
-    }
-
-`
+export const FooterLinksItems

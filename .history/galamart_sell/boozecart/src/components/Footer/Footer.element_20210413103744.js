@@ -78,21 +78,6 @@ export const FooterLinksWrapper = styled.div`
 
     @media screen and (max-width:820px){
         flex-direction: column;
+
     }
-`
-
-export const FooterLinksItems = styled.div`
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 16px;
-    width: 160px;
-    box-sizing: border-box;
-    color: #fff;
-
-    @media screen and (max-width: 420px){
-
-        margin-bottom : 16px;
-    }
-
 `
