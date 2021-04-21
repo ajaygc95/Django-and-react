@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FaMagento } from "react-icons/fa";
 
 export const FooterContainer = styled.div`
+  display: inline-block;
   top: 20px;
   background-color: #101522;
   max-width: 1500px;

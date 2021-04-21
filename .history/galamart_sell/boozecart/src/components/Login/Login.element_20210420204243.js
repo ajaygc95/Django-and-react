@@ -6,13 +6,11 @@ export const LoginContainer = styled.div`
   max-width: 1100px;
   height: 100vh;
   margin: auto;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   position: relative;
-  margin-bottom: 30px;
 `;
 
 export const LoginWrapper = styled.div`
-  margin-top: 20px;
   box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.75);
   padding: 10px 20px;
   width: 400px;
@@ -45,114 +43,100 @@ export const LoginBox = styled.div`
 
 export const Topq = styled.div`
   text-align: center;
-  display: flex;
-  justify-content: center;
-  height: 40px;
-  align-items: center;
-  /* width: 80%;
+
+  /* display: flex;
+  width: 80%;
   height: 40px;
   margin: auto;
   align-items: center;
   justify-content: center; */
 `;
 export const YesAccount = styled.p`
-  margin-right: 5px;
+  /* margin-right: 5px; */
 `;
 
 export const LoginForm = styled.form`
-  margin-top: 20px;
+  /* margin-top: 20px;
   display: grid;
+  width: 80%;
   align-self: center;
   grid-gap: 10px;
 
   @media screen and (max-width: 820px) {
-    width: 80%;
+    width: 80%; */
   }
 `;
 
-export const SocialDiv = styled.div``;
-
-export const FontAwesomeStyle = styled.div`
-  display: flex;
-  justify-content: center;
-  padding: 10px 20px;
-  align-items: center;
-  /* font-family: DD-TTNorms;
-  display: flex;
-  height: 50px;
-  font-size: 35px;
-  padding: 10px 20px;
-  align-items: center;
-  justify-content: center; */
-`;
-
 export const SocialLabel = styled.div`
-  font-weight: bold;
+  /* font-weight: bold;
   margin-left: 10px;
-  font-size: 20px;
+  font-size: 20px; */
 `;
 
 export const IconStyle1 = styled.div`
-  border: 2px solid #4267b2;
+  /* border: 2px solid #4267b2;
   color: #4267b2;
 
   &:hover {
     cursor: pointer;
     background: #4267b2;
     border: 2px solid #4267b2;
-    color: white;
+    color: white; */
   }
 `;
 
 export const IconStyle2 = styled.div`
-  color: red;
+  /* color: red;
   border: 2px solid red;
-  &:hover {
+  /* background: red; */
+  /* &:hover {
     cursor: pointer;
     opacity: 0.9;
     background: #4285f4;
     color: white;
-    border: 2px solid #4285f4;
-  }
+    border: 2px solid #4285f4; */
+  } */
 `;
 
 export const IconStyle3 = styled.div`
-  border: 2px solid black;
+  /* border: 2px solid black;
   color: black;
   &:hover {
     cursor: pointer;
     background: black;
     border: 2px solid black;
-    color: white;
+    color: white; */
   }
 `;
 
 export const SignUpDetail = styled.div`
+  border: 1px solid aqua;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
 `;
 
 export const DetailGrid = styled.div`
-  margin-bottom: 10px;
-  display: flex;
-  justify-content: space-around;
+  /* margin-bottom: 10px;
+  /* background: red; */
+  /* display: flex;
+  justify-content: space-around; */ */
 `;
 
 export const LoginFormInput = styled.div`
-  width: 100%;
-  margin-right: 6px;
+  /* width: 100%;
+  margin-right: 6px; */
 `;
 
 export const FormName = styled.h4`
-  font-size: 0.9rem;
+  /* font-size: 0.9rem;
   padding-left: 5px;
   margin-bottom: 5px;
   text-align: left;
-  margin-left: 3px;
+  margin-left: 3px; */
 `;
 export const FormField = styled.input`
-  width: 100%;
+  /* width: 100%;
   border: none;
   height: 50px;
   padding-left: 10px;
@@ -160,8 +144,10 @@ export const FormField = styled.input`
 
   &::placeholder {
     padding-left: 10px;
-  }
+  } */
 `;
+
+export const SocialDiv = styled.div``;
 
 export const NavLinks = styled(Link)`
   /* color: #ed0202;
@@ -183,4 +169,14 @@ export const LoginHeader = styled.h1`
 export const LoginButton = styled(Button)`
   /* padding: 15px 40px;
   font-size: 20px; */
+`;
+
+export const FontAwesomeStyle = styled.div`
+  /* font-family: DD-TTNorms;
+  display: flex;
+  height: 50px;
+  font-size: 35px;
+  padding: 10px 20px;
+  align-items: center;
+  justify-content: center; */
 `;

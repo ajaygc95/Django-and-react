@@ -6,13 +6,11 @@ export const LoginContainer = styled.div`
   max-width: 1100px;
   height: 100vh;
   margin: auto;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   position: relative;
-  margin-bottom: 30px;
 `;
 
 export const LoginWrapper = styled.div`
-  margin-top: 20px;
   box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.75);
   padding: 10px 20px;
   width: 400px;
@@ -128,6 +126,7 @@ export const IconStyle3 = styled.div`
 `;
 
 export const SignUpDetail = styled.div`
+  border: 1px solid aqua;
   margin-top: 20px;
   display: flex;
   flex-direction: column;
@@ -152,7 +151,7 @@ export const FormName = styled.h4`
   margin-left: 3px;
 `;
 export const FormField = styled.input`
-  width: 100%;
+  /* width: 100%;
   border: none;
   height: 50px;
   padding-left: 10px;
@@ -160,7 +159,7 @@ export const FormField = styled.input`
 
   &::placeholder {
     padding-left: 10px;
-  }
+  } */
 `;
 
 export const NavLinks = styled(Link)`

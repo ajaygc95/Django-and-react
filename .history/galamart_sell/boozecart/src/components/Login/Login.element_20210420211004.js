@@ -6,9 +6,9 @@ export const LoginContainer = styled.div`
   max-width: 1100px;
   height: 100vh;
   margin: auto;
-  /* border: 2px solid red; */
+  border: 2px solid red;
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 
 export const LoginWrapper = styled.div`

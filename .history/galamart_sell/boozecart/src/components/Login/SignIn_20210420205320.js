@@ -47,7 +47,8 @@ const Login = () => {
               <NavLinks to="/sign-up">Sign Up</NavLinks>
             </Topq>
 
-            <LoginForm>          
+            <LoginForm>
+              
               <SocialDiv>
                 <IconStyle1>
                   <FontAwesomeStyle>
