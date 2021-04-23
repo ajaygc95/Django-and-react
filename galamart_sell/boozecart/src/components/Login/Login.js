@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
 import { faWineGlass } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
@@ -31,14 +32,37 @@ import {
 } from "./Login.element";
 
 const Login = () => {
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [country, setCountry] = useState("");
+  const [phonenumber, setPhoneNumber] = useState(null);
+  const [items, setItems] = useState([]);
+
+  // const getDetails = async () => {
+  //   const response = await axios.get("http://localhost:8000/api/todos/");
+  //   setItems(response.data);
+  // };
+
+  // useEffect(() => {
+  //   getDetails();
+  // }, []);
+
   const [login, setLogin] = useState();
-  useEffect(() => {
-    console.log("HELOOO");
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <>
       <LoginContainer>
+        {/* <h1> Hello world</h1>
+        {items.map((item) => (
+          <div>
+            {item.id}
+            {item.title}
+            {item.description}
+          </div>
+        ))} */}
         <LoginWrapper>
           <LoginBox>
             <LoginHeader>Sign Up</LoginHeader>
@@ -84,6 +108,10 @@ const Login = () => {
                       name="firstname"
                       type="text"
                       placeholder="First Name"
+                      value={firstname}
+                      onChange={(e) => {
+                        setFirstname(e.target.value);
+                      }}
                     ></FormField>
                   </LoginFormInput>
                   <LoginFormInput>
@@ -92,6 +120,8 @@ const Login = () => {
                       name="firstname"
                       type="text"
                       placeholder="Last Name"
+                      value={lastname}
+                      onChange={(e) => setLastname(e.target.value)}
                     ></FormField>
                   </LoginFormInput>
                 </DetailGrid>
@@ -102,6 +132,8 @@ const Login = () => {
                       name="email"
                       type="email"
                       placeholder="something@email.com"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     ></FormField>
                   </LoginFormInput>
                 </DetailGrid>
@@ -112,6 +144,8 @@ const Login = () => {
                       name="country"
                       type="dropdown"
                       placeholder="+1 (     )"
+                      value={country}
+                      onChange={(e) => setCountry(e.target.value)}
                     ></FormField>
                   </LoginFormInput>
                   <LoginFormInput>
@@ -120,18 +154,24 @@ const Login = () => {
                       name="mobile"
                       type="number"
                       placeholder="Phone number"
+                      value={phonenumber}
+                      onChange={(e) => setPhoneNumber(e.target.value)}
                     ></FormField>
                   </LoginFormInput>
                 </DetailGrid>
                 <DetailGrid>
                   <LoginFormInput>
                     <FormName>Password</FormName>
-                    <FormField name="password" type="password"></FormField>
+                    <FormField
+                      name="password"
+                      type="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    ></FormField>
                   </LoginFormInput>
                 </DetailGrid>
               </SignUpDetail>
 
-             
               <LoginButton onClick={login}>Sign Up</LoginButton>
             </LoginForm>
           </LoginBox>

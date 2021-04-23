@@ -1,18 +1,19 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 export const MainContainer = styled.div`
-  border-bottom: 1px solid gray;
   max-width: 1500px;
   margin: auto;
 `;
 
-export const TypeCircleContainer = styled(Container)`
+export const TypeCircleContainer = styled.div`
+  padding-top: 15px;
   height: 150px;
   display: flex;
-  padding-top: 20px;
-  justify-content: space-between;
+  justify-content: space-around;
 `;
-export const CircleBoxWrapper = styled.div``;
+export const CircleBoxWrapper = styled.div`
+
+`;
 
 export const FontAwesomeWrapper = styled.div`
   text-align: center;

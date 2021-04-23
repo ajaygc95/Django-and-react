@@ -75,6 +75,13 @@ const TypeCircle = () => {
       alt: "Image",
       img: require("../../images/healthy.png"),
     },
+    {
+      id: 1,
+      type: "Healthy",
+      fonticon: "faHome",
+      alt: "Image",
+      img: require("../../images/italian.png"),
+    },
   ];
   return (
     <>
@@ -91,6 +98,7 @@ const TypeCircle = () => {
             </CircleBoxWrapper>
           ))}
         </TypeCircleContainer>
+        <hr></hr>
       </MainContainer>
     </>
   );

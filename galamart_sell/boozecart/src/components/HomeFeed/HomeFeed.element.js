@@ -2,12 +2,12 @@ import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
 export const HomeFeedContainer = styled.div`
+  max-width: 1500px;
+  margin: auto;
   margin-top: 50px;
 `;
 
-export const ContainerWrapper = styled.div`
-  padding: 20px 100px;
-`;
+export const ContainerWrapper = styled.div``;
 
 export const HomeFeedWrapper = styled.div`
   display: grid;
@@ -19,7 +19,7 @@ export const HomeFeedWrapper = styled.div`
 export const BoxWrapper = styled.div`
   /* border: 2px solid red; */
   display: grid;
-  grid-template-columns: 6fr 6fr 0.5fr;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
   height: 150px;
   grid-gap: 20px;
@@ -31,6 +31,7 @@ export const HeaderTitle = styled.div`
 `;
 
 export const HomeFeedBox1 = styled.div`
+  /* background: orange; */
   padding-top: 5px;
   display: flex;
   justify-content: space-between;
@@ -63,6 +64,7 @@ export const CircleWrapper = styled.div``;
 export const Circle = styled.div`
   display: inline-block;
   background: #dadbe0;
+  text-align: center;
   height: 30px;
   width: 30px;
   font-size: 12px;
