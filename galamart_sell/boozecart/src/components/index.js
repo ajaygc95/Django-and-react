@@ -6,3 +6,5 @@ export { default as Boxes } from "./Boxes/Boxes";
 export { default as DynamicBoxes } from "./DynamicBoxes/DynamicBoxes";
 export { default as Login } from "./Login/Login";
 export { default as SignIn } from "./Login/SignIn";
+export { default as HomeFeed } from "./HomeFeed/HomeFeed";
+export { default as TypeCircle } from "./TypeCircle/TypeCircle";

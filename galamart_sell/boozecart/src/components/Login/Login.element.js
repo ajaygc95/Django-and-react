@@ -24,24 +24,7 @@ export const LoginWrapper = styled.div`
   text-align: center;
 `;
 
-export const LoginBox = styled.div`
-  /* height: 100%; */
-
-  /* border-radius: 10px;
-
-  box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.75);
-  display: flex;
-  flex-direction: column;
-  max-width: 500px;
-  padding: 20px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: auto;
-  top: 60px;
-  text-align: center;
-  margin: auto; */
-`;
+export const LoginBox = styled.div``;
 
 export const Topq = styled.div`
   text-align: center;
