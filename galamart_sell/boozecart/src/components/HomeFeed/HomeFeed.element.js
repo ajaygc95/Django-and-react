@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
+
 export const HomeFeedContainer = styled.div`
   max-width: 1500px;
   margin: auto;
@@ -26,7 +27,7 @@ export const BoxWrapper = styled.div`
 `;
 
 export const HeaderTitle = styled.div`
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 30px;
 `;
 

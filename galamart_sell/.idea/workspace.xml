@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9025d31-c2ee-4fe7-b729-fda8020d2cc6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/galamart_sell.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/galamart_sell.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boozecart/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boozecart/src/components/NavBar/Navbar.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/components/NavBar/Navbar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boozecart/src/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boozecart/src/components/Footer/Footer.element.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/components/Footer/Footer.element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boozecart/src/components/HomeFeed/HomeFeed.element.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/components/HomeFeed/HomeFeed.element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boozecart/src/components/Login/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/components/Login/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boozecart/src/components/TypeCircle/TypeCircle.js" beforeDir="false" afterPath="$PROJECT_DIR$/boozecart/src/components/TypeCircle/TypeCircle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/galamart_sell/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/galamart_sell/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

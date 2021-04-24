@@ -5,7 +5,6 @@ import { FaMagento } from "react-icons/fa";
 export const FooterContainer = styled.div`
   top: 20px;
   background-color: #101522;
-  max-width: 1500px;
   margin: auto;
   padding: 4rem 0 2 rem 0;
   display: flex;

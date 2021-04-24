@@ -40,21 +40,41 @@ const Login = () => {
   const [phonenumber, setPhoneNumber] = useState(null);
   const [items, setItems] = useState([]);
 
-  // const getDetails = async () => {
-  //   const response = await axios.get("http://localhost:8000/api/todos/");
-  //   setItems(response.data);
-  // };
+  const data = {
+    title: "from-react",
+    description: "this is react descp",
+    completed: true,
+  };
 
-  // useEffect(() => {
-  //   getDetails();
-  // }, []);
-
-  const [login, setLogin] = useState();
-  useEffect(() => {}, []);
+  const handleSubmit = (e) => {
+    axios
+      .post("http://localhost:8000/api/todos/", data)
+      .then(function (response) {
+        console.log("this is response" + response);
+      })
+      .catch(function (error) {
+        console.log("this is error" + error);
+      });
+  };
 
   return (
     <>
       <LoginContainer>
+        <div className="container">
+          <form className="white" onSubmit={handleSubmit}>
+            <h5 className="grey-text.text-darken-3">Sign Up With Email</h5>
+            <div className="input-field">
+              <label htmlFor="lastName">Last Name</label>
+              <input type="text" name="lastName" />
+            </div>
+            <div className="input-field">
+              <button className="btn blue darken-3" type="submit">
+                Sign Up
+              </button>
+            </div>
+          </form>
+        </div>
+
         {/* <h1> Hello world</h1>
         {items.map((item) => (
           <div>
@@ -63,7 +83,7 @@ const Login = () => {
             {item.description}
           </div>
         ))} */}
-        <LoginWrapper>
+        {/* <LoginWrapper>
           <LoginBox>
             <LoginHeader>Sign Up</LoginHeader>
             <Topq>
@@ -175,7 +195,7 @@ const Login = () => {
               <LoginButton onClick={login}>Sign Up</LoginButton>
             </LoginForm>
           </LoginBox>
-        </LoginWrapper>
+        </LoginWrapper> */}
       </LoginContainer>
     </>
   );

@@ -77,7 +77,7 @@ const TypeCircle = () => {
     },
     {
       id: 1,
-      type: "Healthy",
+      type: "Arabic",
       fonticon: "faHome",
       alt: "Image",
       img: require("../../images/italian.png"),
