@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { faWineGlass } from "@fortawesome/free-solid-svg-icons";
 import {
   faFacebook,
   faGoogle,
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
+import { FaExclamationCircle } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useForm from "./useForm";
+import validate from "./ValidateInfo";
 import {
   LoginBox,
   LoginContainer,
@@ -29,38 +31,38 @@ import {
   YesAccount,
   SocialDiv,
   NavLinks,
+  ErrorsSignUp,
 } from "./Login.element";
 
-const Login = () => {
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
-  const [country, setCountry] = useState("");
-  const [phonenumber, setPhoneNumber] = useState(null);
+const Login = ({ submitForm }) => {
+  const { handleChange, values, handleSubmit, errors } = useForm(
+    submitForm,
+    validate
+  );
   const [items, setItems] = useState([]);
 
   const data = {
-    title: "from-react",
-    description: "this is react descp",
-    completed: true,
+    title: "with-details",
+    description: "THis is something cool with api",
   };
 
-  const handleSubmit = (e) => {
-    axios
-      .post("http://localhost:8000/api/todos/", data)
-      .then(function (response) {
-        console.log("this is response" + response);
-      })
-      .catch(function (error) {
-        console.log("this is error" + error);
-      });
-  };
+  // const handleSubmit = (e) => {
+  //   console.log(data);
+  //   fetch("http://localhost:8000/api/todos/", {
+  //     method: "POST",
+  //     headers: { "Content-Type": "application/json" },
+  //   })
+  //     .then(function (response) {
+  //       console.log("this is response" + response);
+  //       console.log(response.token);
+  //     })
+  //     .catch(function (error) {});
+  // };
 
   return (
     <>
       <LoginContainer>
-        <div className="container">
+        {/* <div className="container">
           <form className="white" onSubmit={handleSubmit}>
             <h5 className="grey-text.text-darken-3">Sign Up With Email</h5>
             <div className="input-field">
@@ -73,17 +75,9 @@ const Login = () => {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
 
-        {/* <h1> Hello world</h1>
-        {items.map((item) => (
-          <div>
-            {item.id}
-            {item.title}
-            {item.description}
-          </div>
-        ))} */}
-        {/* <LoginWrapper>
+        <LoginWrapper>
           <LoginBox>
             <LoginHeader>Sign Up</LoginHeader>
             <Topq>
@@ -128,21 +122,33 @@ const Login = () => {
                       name="firstname"
                       type="text"
                       placeholder="First Name"
-                      value={firstname}
-                      onChange={(e) => {
-                        setFirstname(e.target.value);
-                      }}
+                      value={values.firstname}
+                      onChange={handleChange}
                     ></FormField>
+
+                    {errors.firstname && (
+                      <ErrorsSignUp>
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.firstname}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                   <LoginFormInput>
                     <FormName>Last Name</FormName>
                     <FormField
-                      name="firstname"
+                      name="lastname"
                       type="text"
                       placeholder="Last Name"
-                      value={lastname}
-                      onChange={(e) => setLastname(e.target.value)}
+                      value={values.lastname}
+                      onChange={handleChange}
                     ></FormField>
+                    {errors.lastname && (
+                      <ErrorsSignUp>
+                        {" "}
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.lastname}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                 </DetailGrid>
                 <DetailGrid>
@@ -151,10 +157,16 @@ const Login = () => {
                     <FormField
                       name="email"
                       type="email"
-                      placeholder="something@email.com"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
+                      value={values.email}
+                      onChange={handleChange}
                     ></FormField>
+                    {errors.email && (
+                      <ErrorsSignUp>
+                        {" "}
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.email}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                 </DetailGrid>
                 <DetailGrid>
@@ -164,19 +176,33 @@ const Login = () => {
                       name="country"
                       type="dropdown"
                       placeholder="+1 (     )"
-                      value={country}
-                      onChange={(e) => setCountry(e.target.value)}
+                      value={values.country}
+                      onChange={handleChange}
                     ></FormField>
+                    {errors.country && (
+                      <ErrorsSignUp>
+
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.country}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                   <LoginFormInput>
                     <FormName>Mobile Number</FormName>
                     <FormField
-                      name="mobile"
-                      type="number"
+                      name="phonenumber"
+                      type="text"
                       placeholder="Phone number"
-                      value={phonenumber}
-                      onChange={(e) => setPhoneNumber(e.target.value)}
+                      value={values.phonenumber}
+                      onChange={handleChange}
                     ></FormField>
+                    {errors.phonenumber && (
+                      <ErrorsSignUp>
+
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.phonenumber}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                 </DetailGrid>
                 <DetailGrid>
@@ -185,17 +211,24 @@ const Login = () => {
                     <FormField
                       name="password"
                       type="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
+                      value={values.password}
+                      onChange={handleChange}
                     ></FormField>
+                    {errors.password && (
+                      <ErrorsSignUp>
+
+                        <FaExclamationCircle></FaExclamationCircle>
+                         {errors.password}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                 </DetailGrid>
               </SignUpDetail>
 
-              <LoginButton onClick={login}>Sign Up</LoginButton>
+              <LoginButton onClick={handleSubmit}>Sign Up</LoginButton>
             </LoginForm>
           </LoginBox>
-        </LoginWrapper> */}
+        </LoginWrapper>
       </LoginContainer>
     </>
   );

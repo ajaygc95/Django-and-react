@@ -41,13 +41,13 @@ const Login = () => {
       <LoginContainer>
         <LoginWrapper>
           <LoginBox>
-            <LoginHeader>Sign Up</LoginHeader>
+            <LoginHeader>Sign In</LoginHeader>
             <Topq>
               <YesAccount>New to BoozeCart?</YesAccount>
               <NavLinks to="/sign-up">Sign Up</NavLinks>
             </Topq>
 
-            <LoginForm>          
+            <LoginForm>
               <SocialDiv>
                 <IconStyle1>
                   <FontAwesomeStyle>

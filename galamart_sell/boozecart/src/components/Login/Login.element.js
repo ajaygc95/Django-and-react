@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { isStyledComponent } from "styled-components";
 import { Button, Container } from "../../globalStyles";
 import { Link } from "react-router-dom";
 
@@ -166,4 +166,14 @@ export const LoginHeader = styled.h1`
 export const LoginButton = styled(Button)`
   /* padding: 15px 40px;
   font-size: 20px; */
+`;
+
+export const ErrorsSignUp = styled.p`
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: red;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
 `;

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Login } from "../../components";
+import HomeFeedPage from "../HomeFeed/HomeFeedPage";
 
 const LoginPage = () => {
+  const [isSubmitted, setIsSubmitted] = useState(false);
+
+  function submitForm() {
+    setIsSubmitted(true);
+  }
   return (
-    <>
-      <Login></Login>
-    </>
+    <>{!isSubmitted ? <Login submitForm={submitForm} /> : <HomeFeedPage />}</>
   );
 };
 
