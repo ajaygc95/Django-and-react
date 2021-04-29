@@ -115,7 +115,7 @@ const Login = ({ submitForm }) => {
               </SocialDiv>
               <hr></hr>
               <SignUpDetail>
-                <DetailGrid>
+                {/* <DetailGrid>
                   <LoginFormInput>
                     <FormName>First Name</FormName>
                     <FormField
@@ -150,6 +150,23 @@ const Login = ({ submitForm }) => {
                       </ErrorsSignUp>
                     )}
                   </LoginFormInput>
+                </DetailGrid> */}
+                <DetailGrid>
+                  <LoginFormInput>
+                    <FormName>Username</FormName>
+                    <FormField
+                      name="username"
+                      type="username"
+                      value={values.username}
+                      onChange={handleChange}
+                    ></FormField>
+                    {errors.email && (
+                      <ErrorsSignUp>
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.email}
+                      </ErrorsSignUp>
+                    )}
+                  </LoginFormInput>
                 </DetailGrid>
                 <DetailGrid>
                   <LoginFormInput>
@@ -162,14 +179,13 @@ const Login = ({ submitForm }) => {
                     ></FormField>
                     {errors.email && (
                       <ErrorsSignUp>
-                        {" "}
                         <FaExclamationCircle></FaExclamationCircle>
                         {errors.email}
                       </ErrorsSignUp>
                     )}
                   </LoginFormInput>
                 </DetailGrid>
-                <DetailGrid>
+                {/* <DetailGrid>
                   <LoginFormInput>
                     <FormName>Country</FormName>
                     <FormField
@@ -204,7 +220,7 @@ const Login = ({ submitForm }) => {
                       </ErrorsSignUp>
                     )}
                   </LoginFormInput>
-                </DetailGrid>
+                </DetailGrid> */}
                 <DetailGrid>
                   <LoginFormInput>
                     <FormName>Password</FormName>
@@ -216,9 +232,8 @@ const Login = ({ submitForm }) => {
                     ></FormField>
                     {errors.password && (
                       <ErrorsSignUp>
-
                         <FaExclamationCircle></FaExclamationCircle>
-                         {errors.password}
+                        {errors.password}
                       </ErrorsSignUp>
                     )}
                   </LoginFormInput>

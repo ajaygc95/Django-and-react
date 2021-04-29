@@ -3,12 +3,13 @@ import axios from "axios";
 
 export const useForm = (callback, validate) => {
   const [values, setValues] = useState({
-    firstname: "",
-    lastname: "",
+    // firstname: "",
+    // lastname: "",
+    username: "",
     email: "",
     password: "",
-    phonenumber: "",
-    country: "",
+    // phonenumber: "",
+    // country: "",
   });
 
   const [errors, setErros] = useState({});
@@ -36,13 +37,13 @@ export const useForm = (callback, validate) => {
 
   useEffect(() => {
     if (Object.keys(errors).length === 0 && isSubmitting) {
-      fetch("http://localhost:8000/auth/", {
+      fetch("http://127.0.0.1:8000/user/users/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(values),
       })
         .then(function (response) {
-          console.log("this is response" + response);
+          console.log("this is response" + response.data);
           console.log(response.token);
         })
         .catch(function (error) {});

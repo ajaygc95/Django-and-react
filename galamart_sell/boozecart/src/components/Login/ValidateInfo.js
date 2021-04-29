@@ -1,18 +1,18 @@
 export default function validateInfo(values) {
   let errors = {};
 
-  if (!values.firstname.trim()) {
-    errors.firstname = "First Name is required";
+  if (!values.username.trim()) {
+    errors.username = "First Name is required";
   }
-  if (!values.lastname.trim()) {
-    errors.lastname = "Last Name required";
-  }
-  if (!values.country.trim()) {
-    errors.country = "Country required";
-  }
-  if (!values.phonenumber.trim()) {
-    errors.phonenumber = "Mobile Number required";
-  }
+  // if (!values.lastname.trim()) {
+  //   errors.lastname = "Last Name required";
+  // }
+  // if (!values.country.trim()) {
+  //   errors.country = "Country required";
+  // }
+  // if (!values.phonenumber.trim()) {
+  //   errors.phonenumber = "Mobile Number required";
+  // }
   // else if (!/^[A-Za-z]+/.test(values.name.trim())) {
   //   errors.name = 'Enter a valid name';
   // }

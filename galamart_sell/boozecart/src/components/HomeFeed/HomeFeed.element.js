@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
-
 export const HomeFeedContainer = styled.div`
   max-width: 1500px;
   margin: auto;
@@ -48,6 +47,7 @@ export const HomeFeedBox = styled.div`
 `;
 
 export const ImageWrapper = styled.div`
+  border: 2px solid orange;
   align-self: flex-start;
 `;
 export const ItemDetails = styled.div`
