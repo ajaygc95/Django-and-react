@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import axios from "axios";
 import {
   faFacebook,
@@ -39,44 +39,9 @@ const Login = ({ submitForm }) => {
     submitForm,
     validate
   );
-  const [items, setItems] = useState([]);
-
-  const data = {
-    title: "with-details",
-    description: "THis is something cool with api",
-  };
-
-  // const handleSubmit = (e) => {
-  //   console.log(data);
-  //   fetch("http://localhost:8000/api/todos/", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //   })
-  //     .then(function (response) {
-  //       console.log("this is response" + response);
-  //       console.log(response.token);
-  //     })
-  //     .catch(function (error) {});
-  // };
-
   return (
     <>
       <LoginContainer>
-        {/* <div className="container">
-          <form className="white" onSubmit={handleSubmit}>
-            <h5 className="grey-text.text-darken-3">Sign Up With Email</h5>
-            <div className="input-field">
-              <label htmlFor="lastName">Last Name</label>
-              <input type="text" name="lastName" />
-            </div>
-            <div className="input-field">
-              <button className="btn blue darken-3" type="submit">
-                Sign Up
-              </button>
-            </div>
-          </form>
-        </div> */}
-
         <LoginWrapper>
           <LoginBox>
             <LoginHeader>Sign Up</LoginHeader>

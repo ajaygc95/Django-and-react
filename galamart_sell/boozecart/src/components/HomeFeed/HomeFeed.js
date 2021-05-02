@@ -18,20 +18,21 @@ import {
 
 function HomeFeed() {
   const [dataItems, setDataItems] = useState([]);
-
-  fetch("http://127.0.0.1:8000/api/books/", {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Token 96347ffd71f442a6fb54d23bdb77e5a610bd3364`,
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      setDataItems(data);
-      console.log("This is console" + data.token);
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/api/books/", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Token 96347ffd71f442a6fb54d23bdb77e5a610bd3364`,
+      },
     })
-    .catch(function (error) {});
+      .then((response) => response.json())
+      .then((data) => {
+        setDataItems(data);
+        console.log("This is console" + data.token);
+      })
+      .catch(function (error) {});
+  }, []);
 
   // const dataItems = [
   //   {

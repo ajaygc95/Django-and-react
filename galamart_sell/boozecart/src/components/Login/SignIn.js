@@ -5,7 +5,10 @@ import {
   faGoogle,
   faApple,
 } from "@fortawesome/free-brands-svg-icons";
+import { FaExclamationCircle } from "react-icons/fa";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import useForm from "./useSignInForm";
+import validate from "./ValidateInfo";
 import {
   LoginBox,
   LoginContainer,
@@ -28,14 +31,14 @@ import {
   YesAccount,
   SocialDiv,
   NavLinks,
+  ErrorsSignUp,
 } from "./Login.element";
 
-const Login = () => {
-  const [login, setLogin] = useState();
-  useEffect(() => {
-    console.log("HELOOO");
-  }, []);
-
+const Login = ({ submitForm }) => {
+  const { handleChange, values, handleSubmit, errors } = useForm(
+    submitForm,
+    validate
+  );
   return (
     <>
       <LoginContainer>
@@ -78,25 +81,44 @@ const Login = () => {
               <hr></hr>
 
               <SignUpDetail>
+              
                 <DetailGrid>
                   <LoginFormInput>
                     <FormName>Email</FormName>
                     <FormField
                       name="email"
                       type="email"
-                      placeholder="something@email.com"
+                      value={values.email}
+                      onChange={handleChange}
                     ></FormField>
+                    {errors.email && (
+                      <ErrorsSignUp>
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.email}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                 </DetailGrid>
 
                 <DetailGrid>
                   <LoginFormInput>
                     <FormName>Password</FormName>
-                    <FormField name="password" type="password"></FormField>
+                    <FormField
+                      name="password"
+                      type="password"
+                      value={values.password}
+                      onChange={handleChange}
+                    ></FormField>
+                    {errors.password && (
+                      <ErrorsSignUp>
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.password}
+                      </ErrorsSignUp>
+                    )}
                   </LoginFormInput>
                 </DetailGrid>
               </SignUpDetail>
-              <LoginButton onClick={login}>Sing In</LoginButton>
+              <LoginButton onClick={handleSubmit}>Sing In</LoginButton>
             </LoginForm>
           </LoginBox>
         </LoginWrapper>
