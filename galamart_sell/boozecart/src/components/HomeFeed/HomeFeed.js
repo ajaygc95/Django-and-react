@@ -23,7 +23,7 @@ function HomeFeed() {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Token 96347ffd71f442a6fb54d23bdb77e5a610bd3364`,
+        Authorization: `Token ${Token}`,
       },
     })
       .then((response) => response.json())

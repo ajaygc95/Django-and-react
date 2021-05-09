@@ -81,7 +81,6 @@ const Login = ({ submitForm }) => {
               <hr></hr>
 
               <SignUpDetail>
-              
                 <DetailGrid>
                   <LoginFormInput>
                     <FormName>Email</FormName>
@@ -95,6 +94,23 @@ const Login = ({ submitForm }) => {
                       <ErrorsSignUp>
                         <FaExclamationCircle></FaExclamationCircle>
                         {errors.email}
+                      </ErrorsSignUp>
+                    )}
+                  </LoginFormInput>
+                </DetailGrid>
+                <DetailGrid>
+                  <LoginFormInput>
+                    <FormName>Username</FormName>
+                    <FormField
+                      name="username"
+                      type="username"
+                      value={values.username}
+                      onChange={handleChange}
+                    ></FormField>
+                    {errors.username && (
+                      <ErrorsSignUp>
+                        <FaExclamationCircle></FaExclamationCircle>
+                        {errors.password}
                       </ErrorsSignUp>
                     )}
                   </LoginFormInput>

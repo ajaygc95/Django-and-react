@@ -13,6 +13,7 @@ import {
   NavLinks,
   NavItemBtn,
   NavBtnLink,
+  SignInButton,
 } from "./Navbar.element";
 
 const Navbar = () => {
@@ -53,9 +54,12 @@ const Navbar = () => {
             <NavItem>
               <NavLinks to="/home-feed">Products</NavLinks>
             </NavItem>
-            <NavItem>
-              <NavLinks to="/sign-in">Sign In</NavLinks>
-            </NavItem>
+            <SignInButton>
+              <NavItem>
+                <NavLinks to="/user-auth">Sign In</NavLinks>
+              </NavItem>
+            </SignInButton>
+
             <NavItemBtn>
               {button ? (
                 <NavBtnLink to="/sign-up">

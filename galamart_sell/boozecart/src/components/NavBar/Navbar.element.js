@@ -139,3 +139,9 @@ export const NavBtnLink = styled(Link)`
   border: none;
   outline: none;
 `;
+
+export const SignInButton = styled.a`
+  background: #6982f0;
+  color: red;
+  border: 1px solid blue;
+`;

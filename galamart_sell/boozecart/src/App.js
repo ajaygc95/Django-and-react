@@ -6,6 +6,7 @@ import HeroService from "./pages/Services/HeroService";
 import LoginPage from "./pages/LoginPage/LoginPage";
 import SignInPage from "./pages/LoginPage/SignInPage";
 import HomeFeedPage from "./pages/HomeFeed/HomeFeedPage";
+import UserAuthPage from "./pages/UserAuth/UserAuthPage";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/sign-up" component={LoginPage}></Route>
         <Route path="/sign-in" component={SignInPage}></Route>
         <Route path="/home-feed" component={HomeFeedPage}></Route>
+        <Route path="/user-auth" component={UserAuthPage}></Route>
       </Switch>
       <Footer />
     </Router>
