@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { Container } from "../../globalStyles";
 
-export const DetailViewContainer = styled(Container)``;
+export const DetailViewContainer = styled(Container)`
+  margin-top: 20px;
+`;
 
 export const DetailViewImageContainer = styled.div``;
 export const ImageContainer = styled.div``;
 
 export const Image = styled.img`
+  box-shadow: 2px 3px 24px 0px rgba(0, 0, 0, 0.75);
   border-radius: 20px;
   height: 450px;
   width: 1000px;
