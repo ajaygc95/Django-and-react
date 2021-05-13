@@ -1,3 +1,4 @@
+import axios from "axios";
 import React, { useState, useEffect } from "react";
 import girlcart from "../../images/alcohol.jpg";
 import {
@@ -19,20 +20,32 @@ import {
 function HomeFeed() {
   const [dataItems, setDataItems] = useState([]);
   useEffect(() => {
-    fetch("http://127.0.0.1:8000/api/books/", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Token ${Token}`,
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        setDataItems(data);
-        console.log("This is console" + data.token);
+    axios
+      .get("http://127.0.0.1:8000/api/todos/")
+      .then((res) => {
+        console.log(res);
+        setDataItems(res.data);
       })
-      .catch(function (error) {});
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
+
+  // useEffect(() => {
+  //   fetch("http://127.0.0.1:8000/api/todos/", {
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //       Authorization: ``,
+  //     },
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+  //       setDataItems(data);
+  //       console.log("This is console" + data.token);
+  //     })
+  //     .catch(function (error) {});
+  // }, []);
 
   // const dataItems = [
   //   {

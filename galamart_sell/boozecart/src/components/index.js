@@ -8,5 +8,6 @@ export { default as Login } from "./Login/Login";
 export { default as SignIn } from "./Login/SignIn";
 export { default as HomeFeed } from "./HomeFeed/HomeFeed";
 export { default as TypeCircle } from "./TypeCircle/TypeCircle";
-export { default as  RegisterUser} from "./UserAuth/RegisterUser";
-
+export { default as RegisterUser } from "./UserAuth/RegisterUser";
+export { default as DetailStore } from "./DetailStore/DetailStore";
+export { default as ItemList } from "./DetailStore/ItemListComponent/ItemList";
