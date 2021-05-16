@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 import {
   DetailViewContainer,
   DetailViewImageContainer,
@@ -21,17 +23,31 @@ import girlcart from "../../images/detailsview.jpg";
 import { FaRegStar } from "react-icons/fa";
 
 const DetailStore = () => {
+  const { id } = useParams();
+  const [detailItems, setDetailsItems] = useState([]);
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8000/api/todo/todos/${id}`)
+      .then((res) => {
+        console.log(res);
+        setDetailsItems(res.data);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <>
       <DetailViewContainer>
         <DetailViewImageContainer>
           <ImageContainer>
-            <Image src={girlcart}></Image>
+            <Image src={detailItems.cover}></Image>
           </ImageContainer>
           <ImageWrapper>
-            <StoreHeader>Galamart</StoreHeader>
+            <StoreHeader>{detailItems.title}</StoreHeader>
             <ToplineWrapper>
-              <StoreCard>Liquor Store</StoreCard>
+              <StoreCard>{detailItems.description}</StoreCard>
               <StoreCard>
                 4.7
                 <FaItems>

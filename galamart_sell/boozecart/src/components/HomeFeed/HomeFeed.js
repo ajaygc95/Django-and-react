@@ -15,13 +15,15 @@ import {
   Circle,
   CircleWrapper,
   FinalLink,
+  StoreTitleHeader,
 } from "./HomeFeed.element";
+import { Link } from "react-router-dom";
 
 function HomeFeed() {
   const [dataItems, setDataItems] = useState([]);
   useEffect(() => {
     axios
-      .get("http://127.0.0.1:8000/api/todos/")
+      .get("http://127.0.0.1:8000/api/todo/todos/")
       .then((res) => {
         console.log(res);
         setDataItems(res.data);
@@ -97,25 +99,31 @@ function HomeFeed() {
             <h2>Best Rated places near you</h2>
           </HeaderTitle>
           <HomeFeedWrapper>
-            {dataItems.map((dataitem) => (
+            {dataItems.map((dataitem, key) => (
               <BoxWrapper>
                 <ImageWrapper>
                   <HomeImage
-                    // src={dataitem.img.default}
+                    src={dataitem.cover}
                     alt={dataitem.alt}
                   ></HomeImage>
                 </ImageWrapper>
                 <ItemDetails>
                   <HomeFeedBox1>
                     <li>
-                      <h3>{dataitem.title}</h3>
+                      <Link
+                        to={`detail-store/${dataitem.id}`}
+                        key={dataitem.id}
+                        style={{ textDecoration: "none" }}
+                      >
+                        <StoreTitleHeader>{dataitem.title}</StoreTitleHeader>
+                      </Link>
                     </li>
                     <CircleWrapper>
                       <Circle>4.5</Circle>
                     </CircleWrapper>
                   </HomeFeedBox1>
 
-                  {/* <HomeFeedBox>
+                  <HomeFeedBox>
                     <li>{dataitem.description}</li>
                   </HomeFeedBox>
                   <HomeFeedBox>
@@ -124,13 +132,13 @@ function HomeFeed() {
                     ) : (
                       <li> Only Pickup</li>
                     )}
-                  </HomeFeedBox> */}
+                  </HomeFeedBox>
                 </ItemDetails>
               </BoxWrapper>
             ))}
-            <FinalLink>
+            {/* <FinalLink>
               <li>See all</li>
-            </FinalLink>
+            </FinalLink> */}
           </HomeFeedWrapper>
         </ContainerWrapper>
       </HomeFeedContainer>

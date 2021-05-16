@@ -46,8 +46,17 @@ export const HomeFeedBox = styled.div`
   margin-bottom: 5px;
 `;
 
+export const StoreTitleHeader = styled.a`
+  padding: 4px 4px;
+  color: black;
+  font-size: 1.4rem;
+
+  &:hover {
+    font-size: 1.5rem;
+  }
+`;
+
 export const ImageWrapper = styled.div`
-  border: 2px solid orange;
   align-self: flex-start;
 `;
 export const ItemDetails = styled.div`
